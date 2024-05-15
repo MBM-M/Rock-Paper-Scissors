@@ -1,5 +1,3 @@
-console.log("Hello World!")
-
 let roll = ["rock", "paper", "scissors"];
 
 function getComputerChoise() {
