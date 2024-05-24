@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid whitesmoke;
+  }
+
+div {
+    border: 5px solid purple;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    display: flex;
+    align-self: center;
+    height: auto;
+    width: auto;
+}
