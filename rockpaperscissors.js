@@ -60,7 +60,7 @@ const choice = document.createElement("div");
 container.appendChild(choice);
 
 const call = document.createElement("p");
-call.textContent = "ROCK, PAPER, SCISSORS..... SHOOT!!!";
+call.textContent = "FIRST TO 5 WINS. GOOD LUCK!!! ROCK, PAPER, SCISSORS..... SHOOT!!!";
 
 choice.appendChild(call);
 
