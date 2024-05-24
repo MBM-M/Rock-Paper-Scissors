@@ -1,28 +1,25 @@
 let roll = ["rock", "paper", "scissors"];
 
-function getComputerChoise() {
+let getComputerChoise = function() {
     let play = roll[Math.floor(Math.random()*roll.length)];
     return play;
 }
 
-function getHumanChoice() {
-    let choice = prompt("Rock! Paper! Scissors! SHOOT!: ");
-    choice = choice.toLowerCase();
-    return choice;
-}
+//function getHumanChoice() {
+//    let choice = /*prompt*/("Rock! Paper! Scissors! SHOOT!: ");
+//    choice = choice.toLowerCase();
+//    return choice;
+//}
 
-    let humanScore = 0;
-    let computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
-function playGame() {
+//function playGame() {
     
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoise();
-    console.log("You chose: " + humanSelection);
-    console.log("Computer chose: " + computerSelection);
+    //let humanSelection = '';
+    //let computerSelection = getComputerChoise();
 
-
-    function playRound(humanChoice, computerChoice) {
+    let playRound = function(humanChoice, computerChoice) {
         if (humanChoice === "rock") {
             if (computerChoice === "paper") {
                 console.log("Computer Wins! Parer beats Rock!");
@@ -63,15 +60,43 @@ function playGame() {
                 console.log("Score is: You: " + humanScore + " , Computer: " + computerScore);
             }
         }
+
+            console.log("You chose: " + humanChoice);
+            console.log("Computer chose: " + computerChoice);
+            console.log('');
     }
 
-    playRound(humanSelection, computerSelection);
-    console.log('');
-}
+    //playRound(humanSelection, computerSelection);
+    //console.log('');
+//}
 
-let n = 0;
-
+//let n = 0;
+/*
 while (n < 5) {
     playGame();
     n++;
-}
+}*/
+
+const container = document.querySelector("#display");
+
+let rock = document.querySelector("#rock");
+
+let paper = document.querySelector("#paper");
+
+let scissors = document.querySelector("#scissors");
+
+rock.addEventListener("click", () => {
+    playRound("rock", getComputerChoise());
+})
+
+paper.addEventListener("click", () => {
+    playRound("paper", getComputerChoise());
+})
+
+scissors.addEventListener("click", () => {
+    playRound("scissors", getComputerChoise());
+})
+
+container.appendChild(rock);
+container.appendChild(paper);
+container.appendChild(scissors);
